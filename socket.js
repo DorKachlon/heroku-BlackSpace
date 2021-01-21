@@ -20,7 +20,7 @@ const io = socketIO(server);
 
 app.use(cors());
 // app.use(router);
-app.use(express.static(path.join(__dirname, "..", "my-app2", "build")));
+app.use(express.static("build"));
 
 io.on("connection", (socket) => {
   socket.on("join", ({ room }) => {
